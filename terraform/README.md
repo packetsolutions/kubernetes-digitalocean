@@ -11,4 +11,6 @@ kuberbetes_ssh_keys = [
   "root@ubuntu"
 ]
 kubernetes_node_count = 2
+kubernetes_firewall_name_prefix = "kubernetes"
+ip_address_trusted = ["1.1.1.1/24"]
 ```
