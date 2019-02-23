@@ -1,6 +1,9 @@
 # Runbook
-1 - Bring up the cluster using terraform
-```terraform apply```
+1 - Add terraform.tfvars file into terraform folder using the README.md file for
+guideance. Bring up the cluster with:
+```
+terraform apply
+```
 
 2 - Initialize the kubernetes cluster - log into a master and run
 ```ssh -l root $(terraform output -state=terraform/terraform.tfstate kubernetes_master_ipv4_address) kubeadm init --pod-network-cidr=10.244.0.0/16```
