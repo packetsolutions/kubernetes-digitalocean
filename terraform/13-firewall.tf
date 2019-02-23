@@ -77,5 +77,15 @@ resource "digitalocean_firewall" "public_inbound" {
     port_range       = "22"
     source_addresses = "${var.ip_address_trusted}"
   },
+  {
+    protocol         = "tcp"
+    port_range       = "80"
+    source_addresses = "${var.ip_address_trusted}"
+  },
+  {
+    protocol         = "tcp"
+    port_range       = "443"
+    source_addresses = "${var.ip_address_trusted}"
+  },
   ]
 }

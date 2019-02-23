@@ -11,3 +11,11 @@ head -1):/etc/kubernetes/admin.conf config```
 
 4 - Deploy POD network from desktop
 ```kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
+
+5 - Add nodes to master
+
+6 - Add ingress:
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/baremetal/service-nodeport.yaml
+```
