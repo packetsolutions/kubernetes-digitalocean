@@ -87,5 +87,15 @@ resource "digitalocean_firewall" "public_inbound" {
     port_range       = "443"
     source_addresses = "${var.ip_address_trusted}"
   },
+  {
+    protocol         = "tcp"
+    port_range       = "30000-32767"
+    source_addresses = "${var.ip_address_trusted}"
+  },
+  {
+    protocol         = "udp"
+    port_range       = "30000-32767"
+    source_addresses = "${var.ip_address_trusted}"
+  },
   ]
 }
